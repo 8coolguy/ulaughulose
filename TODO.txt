@@ -1,0 +1,7 @@
+TODO
+1. Get the pygame to work with the face mesh.
+2. Find a way to tell if some one is laughing from the face mesh
+3. Create a menu and ui and find funny videos
+4. done, right\
+5. Create ads 
+
