@@ -4,7 +4,7 @@ import numpy as np
 import face_recognition
 import cv2
 
-model =load_model(r'/home/arnav/ulaughulose/face_and_emotion_detection/emotion_detector_models/model_v6_23.hdf5')
+model =load_model(r'face_and_emotion_detection/emotion_detector_models/model_v6_23.hdf5')
 emotion_dict= {'Angry': 0, 'Sad': 5, 'Neutral': 4, 'Disgust': 1, 'Surprise': 6, 'Fear': 2, 'Happy': 3}
 def returnEmotion(picture):
     picture=cv2.resize(picture,(48,48))
