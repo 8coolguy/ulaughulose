@@ -16,8 +16,9 @@ while cap.isOpened():
         continue
     frame.flags.writeable =False
 
-    cv2.imshow('Emotion Detector', frame)
+    
     drawPoints(frame)
+    cv2.imshow('Emotion Detector', frame)
     if cv2.waitKey(5) & 0xFF == 27:
         break
 cap.release()
