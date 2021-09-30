@@ -23,7 +23,7 @@ video ="test_images/testlaugh.mp4"
 
 drawing_spec = mp_drawing.DrawingSpec(thickness=1, circle_radius=0)
 #ser to video to -1 to get screen capture 
-cap = cv2.VideoCapture(video)
+cap = cv2.VideoCapture(0)
 
 
 

@@ -12,36 +12,40 @@ def showPicture(picture):
             break
     #closing all open windows 
     cv2.destroyAllWindows() 
-
-
-if __name__ =="__main__":
-    color =(0,255,0)
-    thick =2
-    path =r'test_images/test_picture8.jpg'
-    image = face_recognition.load_image_file(path)
-    
-    
-
-    
+def scanEmotion(image):
     face_locations =face_recognition.face_locations(image)
-
+   
     start_point=end_point=(0,0)
-    print(f'Face Locations{face_locations}')
+    #print(f'Face Locations{face_locations}')
     if len(face_locations) > 0:
         print("Face Found")
         start_point=tuple(face_locations[0][0:2])
         end_point =tuple(face_locations[0][2:4])
-
+    else:
+        return
 
     
     #image = cv2.rectangle(image, start_point, end_point, color, thick)
-    print(f'{start_point}----{end_point}')
+    #print(f'{start_point}----{end_point}')
     
     image = image[start_point[0]:end_point[0], end_point[-1]:start_point[-1]]
     image =cv2.resize(image, (48,48))    
 
+    #showPicture(image)
+    emotion =returnEmotion(image)
+    if emotion != "Surprise":
+        print(emotion)
+
+if __name__ =="__main__":
+    color =(0,255,0)
+    thick =2
+    path =r'test_images/test_picture2.jpg'
+    image = face_recognition.load_image_file(path)
+    scanEmotion(image)
     showPicture(image)
     
-    print(returnEmotion(image))
+    
+
+
 
 
