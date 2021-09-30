@@ -6,7 +6,7 @@ import face_recognition
 
 #when using video 
 path=r'test_images/testlaugh.mp4'
-cap =cv2.VideoCapture(path)
+cap =cv2.VideoCapture(-1)
 
 while cap.isOpened():
     success, frame =cap.read()

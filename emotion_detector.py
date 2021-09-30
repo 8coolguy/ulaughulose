@@ -33,8 +33,8 @@ def scanEmotion(image):
 
     #showPicture(image)
     emotion =returnEmotion(image)
-    if emotion != "Surprise":
-        print(emotion)
+    #if emotion != "Surprise":
+    print(emotion)
 
 if __name__ =="__main__":
     color =(0,255,0)
