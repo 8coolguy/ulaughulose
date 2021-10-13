@@ -40,3 +40,4 @@
 
 env/
 __pycache__/
+test_images/
