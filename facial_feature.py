@@ -22,7 +22,7 @@ def drawPoints(image):
     return image, len(face_landmarks_list) >0
 if __name__ =="__main__":
     #Load the jpg file into a numpy array
-    image_path="test_images/test_picture8.jpg"
+    image_path="test_images/test_picture7.jpg"
     if len(sys.argv)>1:
         image_path=str(sys.argv[1])
     print(f'Opening {image_path}')

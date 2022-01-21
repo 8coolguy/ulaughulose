@@ -18,7 +18,7 @@ def scanEmotion(image):
     start_point=end_point=(0,0)
     #print(f'Face Locations{face_locations}')
     if len(face_locations) > 0:
-        print("Face Found")
+        #print("Face Found")
         start_point=tuple(face_locations[0][0:2])
         end_point =tuple(face_locations[0][2:4])
     else:
@@ -33,13 +33,13 @@ def scanEmotion(image):
 
     #showPicture(image)
     emotion =returnEmotion(image)
-    #if emotion != "Surprise":
-    print(emotion)
+    if emotion != "Surprise":
+        print(emotion)
 
 if __name__ =="__main__":
     color =(0,255,0)
     thick =2
-    path =r'test_images/test_picture2.jpg'
+    path =r'test_images/test_picture3.jpg'
     image = face_recognition.load_image_file(path)
     scanEmotion(image)
     showPicture(image)
